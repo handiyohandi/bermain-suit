@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bermain Suit</title>
+
+  <style>
+    body {
+      font-family: 'Roboto', 'Arial';
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+    font-size: 46px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #e7e7e7;
+    text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333,
+      -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.7778174593px 0.7778174593px 0 #aaaaaa,
+      1.5556349186px 1.5556349186px 0 #aaaaaa, 2.3334523779px 2.3334523779px 0 #aaaaaa,
+      3.1112698372px 3.1112698372px 0 #aaaaaa, 3.8890872965px 3.8890872965px 0 #aaaaaa,
+      4.6669047558px 4.6669047558px 0 #aaaaaa, 5.4447222151px 5.4447222151px 0 #aaaaaa,
+      6.2225396744px 6.2225396744px 0 #aaaaaa, 7.0003571337px 7.0003571337px 0 #aaaaaa,
+      7.7781745931px 7.7781745931px 0 #aaaaaa;
+    }
+
+    #komputer, #player {
+      max-width: 60%;
+      min-width: 350px;
+      height: 250px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    #komputer {
+      background-color: aqua;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      justify-content: center;
+    }
+
+    #player {
+      background-color: lightgreen;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      justify-content: space-around;
+    }
+
+    #komputer .pilihan-komputer, #player div {
+      width:100px;
+      height: 100px;
+      border: 5px solid black;
+      border-radius: 50%;
+      overflow: hidden;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+
+    #player .gajah {
+      background-image: url(img/gajah.png);
+    }
+
+    #player .orang {
+      background-image: url(img/orang.png);
+    }
+
+    #player .semut {
+      background-image: url(img/semut.png);
+    }
+
+    #player div:hover {
+      box-shadow: 0 0 10px 5px limegreen;
+    }
+
+    #player div:active {
+      top: 5px;
+    }
+
+    #info {
+      height: 60px;
+      width: 200px;
+      margin: -30px auto;
+      line-height: 60px;
+      font-size: 30px;
+      color: #6b0000;
+      text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+      background-color: aliceblue;
+      border: 2px solid salmon;
+      border-radius: 20px;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bermain Suit</h1>
+
+  <div id="komputer">
+    <div>
+      <img class="pilihan-komputer">
+    </div>
+  </div>
+
+  <div id="info"></div>
+
+  <div id="player">
+    <div class="gajah"></div>
+    <div class="orang"></div>
+    <div class="semut"></div>
+  </div>
+
+  <script src="suitjawa.js"></script>
+</body>
+</html>
